@@ -1,0 +1,8 @@
+.link {
+  padding: 10px;
+  font-size: 20px;
+  color: #212121;
+}
+.active {
+  color: #e84a5f;
+}
