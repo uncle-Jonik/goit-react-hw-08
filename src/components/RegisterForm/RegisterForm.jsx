@@ -6,6 +6,7 @@ import { useId } from 'react';
 import { CiLock } from 'react-icons/ci';
 import { CiMail } from 'react-icons/ci';
 import { CiUser } from 'react-icons/ci';
+import { register } from '../../redux/auth/operations';
 
 const logInSchema = Yup.object().shape({
   name: Yup.string().min(3, 'Too Short!').max(50, 'Too Long!').required('This field is required.'),
@@ -28,7 +29,7 @@ export const RegisterForm = () => {
       validationSchema={logInSchema}
       onSubmit={(value, actions) => {
         console.log(value);
-        dispatch();
+        dispatch(register(value));
         actions.resetForm();
       }}
     >

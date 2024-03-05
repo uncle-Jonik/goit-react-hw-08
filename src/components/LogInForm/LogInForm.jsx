@@ -5,6 +5,7 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { useId } from 'react';
 import { CiLock } from 'react-icons/ci';
 import { CiMail } from 'react-icons/ci';
+import { logIn } from '../../redux/auth/operations';
 
 const logInSchema = Yup.object().shape({
   email: Yup.string().min(3, 'Too Short!').max(50, 'Too Long!').required('This field is required.'),
@@ -25,7 +26,7 @@ export const LogInForm = () => {
       validationSchema={logInSchema}
       onSubmit={(value, actions) => {
         console.log(value);
-        dispatch();
+        dispatch(logIn(value));
         actions.resetForm();
       }}
     >
@@ -44,7 +45,7 @@ export const LogInForm = () => {
           Password:
         </label>
         <div className={css.inputBox}>
-          <Field type="text" id={lablePassword} name="password" />
+          <Field type="password" id={lablePassword} name="password" />
           <ErrorMessage name="password" component="span" />
         </div>
 

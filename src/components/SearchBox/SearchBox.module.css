@@ -1,0 +1,11 @@
+.filterBox {
+  max-width: 300px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.filterBox > label {
+  display: block;
+}
+.filterBox > input {
+  width: 100%;
+}
