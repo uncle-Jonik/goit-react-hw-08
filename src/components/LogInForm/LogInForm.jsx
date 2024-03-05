@@ -44,7 +44,7 @@ export const LogInForm = () => {
           Password:
         </label>
         <div className={css.inputBox}>
-          <Field type="number" id={lablePassword} name="password" />
+          <Field type="text" id={lablePassword} name="password" />
           <ErrorMessage name="password" component="span" />
         </div>
 
