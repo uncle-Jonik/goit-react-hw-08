@@ -1,0 +1,17 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.wrapper > p {
+  padding: 10px;
+  font-size: 20px;
+  color: #212121;
+}
+.wrapper span {
+  color: #e84a5f;
+}
+.wrapper > button {
+  padding: 10px;
+  font-size: 20px;
+}

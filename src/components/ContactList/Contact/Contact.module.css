@@ -1,0 +1,8 @@
+.information {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.delBtn {
+  margin-top: 5px;
+}

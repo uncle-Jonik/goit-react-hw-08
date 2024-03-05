@@ -16,3 +16,8 @@
 .inputBox > span {
   color: #e84a5f;
 }
+.labelForm {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

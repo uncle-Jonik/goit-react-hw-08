@@ -22,7 +22,6 @@ export default function Contact({ id, name, number }) {
         className={css.delBtn}
         id={id}
         onClick={e => {
-          console.log(e.target.id);
           dispatch(deleteContacts(e.target.id));
         }}
       >

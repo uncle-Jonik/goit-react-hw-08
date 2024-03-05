@@ -25,7 +25,6 @@ export const LogInForm = () => {
       initialValues={{ email: '', password: '' }}
       validationSchema={logInSchema}
       onSubmit={(value, actions) => {
-        console.log(value);
         dispatch(logIn(value));
         actions.resetForm();
       }}

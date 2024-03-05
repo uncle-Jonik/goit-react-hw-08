@@ -5,6 +5,7 @@ export default function LogInPage() {
   return (
     <div>
       <DocumentTitle>Login</DocumentTitle>
+
       <LogInForm />
     </div>
   );

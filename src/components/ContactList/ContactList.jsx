@@ -8,8 +8,6 @@ export default function ContactList() {
   const loading = useSelector(selectLoading);
   const error = useSelector(selectError);
 
-  console.log(contactsList);
-
   return (
     <div className={css.contactListBox}>
       {error && (

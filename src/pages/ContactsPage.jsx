@@ -5,6 +5,8 @@ import { fetchContacts } from '../redux/contacts/operations';
 import ContactForm from '../components/ContactForm/ContactForm.';
 import SearchBox from '../components/SearchBox/SearchBox';
 import ContactList from '../components/ContactList/ContactList';
+import css from './PagesStyles.module.css';
+import DocumentTitle from '../components/DocumentTitle';
 
 export default function ContactsPage() {
   const dispatch = useDispatch();
@@ -14,11 +16,18 @@ export default function ContactsPage() {
   }, [dispatch]);
   return (
     <>
-      <h1>Phonebook</h1>
+      <DocumentTitle>Contacts</DocumentTitle>
       <ContactForm />
       <SearchBox />
-      <div>{isLoading && 'Request in progress...'}</div>
-      <ContactList />
+      <div>
+        {isLoading ? (
+          <div className={css.information}>
+            <b>Request in progress...</b>
+          </div>
+        ) : (
+          <ContactList />
+        )}
+      </div>
     </>
   );
 }

@@ -1,0 +1,9 @@
+.information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.information > b {
+  font-size: 25px;
+}

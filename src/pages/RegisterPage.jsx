@@ -5,6 +5,7 @@ export default function RegisterPage() {
   return (
     <div>
       <DocumentTitle>Registration</DocumentTitle>
+
       <RegisterForm />
     </div>
   );

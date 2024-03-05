@@ -1,7 +1,8 @@
 import * as Yup from 'yup';
 import css from './ContactForm.module.css';
 import { useId } from 'react';
-// import { nanoid } from 'nanoid';
+import { CiUser } from 'react-icons/ci';
+import { CiPhone } from 'react-icons/ci';
 import { useDispatch } from 'react-redux';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { addContacts } from '../../redux/contacts/operations';
@@ -24,13 +25,13 @@ export default function ContactForm() {
       initialValues={{ name: '', number: '' }}
       validationSchema={contactSchema}
       onSubmit={(value, actions) => {
-        console.log(value);
         dispatch(addContacts(value));
         actions.resetForm();
       }}
     >
       <Form className={css.formicForm}>
         <label htmlFor={lableName} className={css.labelForm}>
+          <CiUser />
           Name:
         </label>
         <div className={css.inputBox}>
@@ -39,6 +40,7 @@ export default function ContactForm() {
         </div>
 
         <label htmlFor={lableNumber} className={css.labelForm}>
+          <CiPhone />
           Number:
         </label>
         <div className={css.inputBox}>
