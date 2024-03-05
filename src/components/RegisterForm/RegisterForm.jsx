@@ -61,7 +61,7 @@ export const RegisterForm = () => {
         </div>
 
         <button type="submit" className={css.btnForm}>
-          Log In
+          Register
         </button>
       </Form>
     </Formik>
